@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "SnapX",
+  "version": "1.0.0",
+  "description": "Advanced screenshot capture and management tool",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SnapX"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "downloads",
+    "desktopCapture",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
