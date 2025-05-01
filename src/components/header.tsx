@@ -7,7 +7,7 @@ export function Header() {
     const { setTheme } = useTheme();
 
     return (
-        <header className="border-b border-border p-4 flex items-center justify-between">
+        <header className="border-b border-border pb-4 flex items-center justify-between">
             <div className="flex items-center gap-4">
                 <Camera className="h-8 w-8 text-primary" />
                 <h1 className="text-[28px] font-bold">SnapShort-X</h1>
