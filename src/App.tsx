@@ -15,7 +15,7 @@ function App() {
 
     return (
         <ThemeProvider defaultTheme="dark">
-            <div className="w-[400px] h-[600px] flex flex-col bg-background text-foreground overflow-hidden">
+            <div className="flex flex-col bg-background text-foreground overflow-hidden">
                 <Header />
 
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col">
