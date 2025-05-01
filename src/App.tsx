@@ -18,9 +18,9 @@ function App() {
             <div className="flex flex-col bg-background text-foreground overflow-hidden">
                 <Header />
 
-                <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col">
-                    <TabsList className="grid grid-cols-3 mx-4">
-                        <TabsTrigger value="capture">Capture</TabsTrigger>
+                <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col pt-4">
+                    <TabsList className="grid grid-cols-3 px-2 gap-4 h-10">
+                        <TabsTrigger value="capture" className="">Capture</TabsTrigger>
                         <TabsTrigger value="gallery">Gallery</TabsTrigger>
                         <TabsTrigger value="settings">Settings</TabsTrigger>
                     </TabsList>
