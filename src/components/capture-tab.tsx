@@ -176,7 +176,7 @@ export function CaptureTab({ onCapture }: CaptureTabProps) {
     };
 
     return (
-        <div className="p-4 h-full overflow-y-auto">
+        <div className="mt-4 h-full overflow-y-auto">
             <Card className="mb-4">
                 <CardContent className="pt-6">
                     <div className="space-y-4">
@@ -217,7 +217,7 @@ export function CaptureTab({ onCapture }: CaptureTabProps) {
                             </Select>
                         </div>
 
-                        <div className="space-y-2">
+                        <div className="space-y-4 pb-2">
                             <div className="flex items-center justify-between">
                                 <Label htmlFor="quality">Quality: {quality}%</Label>
                             </div>
@@ -225,12 +225,12 @@ export function CaptureTab({ onCapture }: CaptureTabProps) {
                         </div>
 
                         <div className="flex items-center space-x-2">
-                            <Switch id="custom-size" checked={customSize} onCheckedChange={setCustomSize} />
+                            <Switch className="p-0" id="custom-size" checked={customSize} onCheckedChange={setCustomSize} />
                             <Label htmlFor="custom-size">Custom Size</Label>
                         </div>
 
                         {customSize && (
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <Label htmlFor="width">Width (px)</Label>
                                     <Input id="width" type="number" value={width} onChange={(e) => setWidth(parseInt(e.target.value) || 100)} min={10} max={2000} />
@@ -244,7 +244,7 @@ export function CaptureTab({ onCapture }: CaptureTabProps) {
 
                         <div className="space-y-2">
                             <Label htmlFor="interval">Capture Interval (seconds)</Label>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-6">
                                 <Input id="interval" type="number" value={interval} onChange={(e) => setInterval(parseInt(e.target.value) || 0)} min={0} className="flex-1" disabled={isCapturing} />
                                 {isCapturing ? (
                                     <Button variant="destructive" onClick={stopIntervalCapture}>
